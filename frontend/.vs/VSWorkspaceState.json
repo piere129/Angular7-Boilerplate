@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src\\app",
+    "\\src\\app\\components",
+    "\\src\\app\\components\\dashboard",
+    "\\src\\app\\components\\hero-detail",
+    "\\src\\app\\components\\hero-search",
+    "\\src\\app\\components\\heroes",
+    "\\src\\app\\components\\login",
+    "\\src\\app\\guards"
+  ],
+  "SelectedNode": "\\src",
+  "PreviewInSolutionExplorer": false
+}

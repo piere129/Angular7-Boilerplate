@@ -1,0 +1,20 @@
+/* HeroesComponent's private CSS styles */
+
+.container {
+  text-align: center;
+}
+
+ul {
+  text-align: center;
+  list-style: none;
+}
+
+
+  button.delete {
+    position: relative;
+    left: 20px;
+   
+    background-color: gray !important;
+    color: white;
+  }
+
