@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
 
+# Features
+
+- basic CRUD functionality
+- authentication
+- routing + protected routes
+- messaging system
+- mocked API calls
+
 # How to install?
 
 1) git clone the repository in your preferred file location
