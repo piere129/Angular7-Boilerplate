@@ -6,12 +6,14 @@ import { HeroDetailComponent } from './components/hero-detail/hero-detail.compon
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { AuthGuard } from './guards/auth.guard';
+import { InputOutputComponent } from './components/input-output/input-output.component';
 const routes: Routes = [
   { path: 'heroes', component: HeroesComponent, canActivate: [AuthGuard] },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'detail/:id', component: HeroDetailComponent, canActivate: [AuthGuard] },
   { path: 'messages', component: MessagesComponent, canActivate: [AuthGuard]},
   { path: 'login', component: LoginComponent },
+  { path: 'input', component: InputOutputComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 
 ];

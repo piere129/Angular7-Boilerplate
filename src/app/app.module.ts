@@ -16,6 +16,8 @@ import { LoginComponent } from './components/login/login.component';
 import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { ErrorInterceptor } from './helpers/error.interceptor';
 import { fakeBackendProvider } from './helpers/fake-backend';
+import { InputOutputComponent } from './components/input-output/input-output.component';
+import { InputOutputChildComponent } from './components/input-output-child/input-output-child.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { fakeBackendProvider } from './helpers/fake-backend';
     DashboardComponent,
     HeroSearchComponent,
     LoginComponent,
+    InputOutputComponent,
+    InputOutputChildComponent,
   ],
   imports: [
     BrowserModule,

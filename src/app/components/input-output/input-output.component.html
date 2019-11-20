@@ -1,0 +1,6 @@
+<p>
+  input-output works!
+</p>
+<p>Counter sent with Output from child: {{counterInParent}}</p>
+<app-input-output-child item="Hello from Parent!" (buttonClicked)='editCounter($event)'></app-input-output-child>
+<p>ViewChild Counter value: {{counterWithViewChild}}</p>

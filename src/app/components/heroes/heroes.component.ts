@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Hero } from '../../models/hero';
 import { HeroService } from '../../services/hero.service';
+import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
 
 @Component({
   selector: 'app-heroes',
@@ -10,12 +11,15 @@ import { HeroService } from '../../services/hero.service';
 export class HeroesComponent implements OnInit {
 
   heroes: Hero[];
+  @ViewChild(HeroDetailComponent)
+  hdc: HeroDetailComponent;
  
   //automatically initialises the heroService variable
   constructor(private heroService: HeroService) { }
 
   ngOnInit() {
     this.getHeroes();
+    console.log(this.hdc.hero);
   }
 
   getHeroes(): void {
