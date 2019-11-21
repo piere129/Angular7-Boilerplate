@@ -2,12 +2,15 @@
   <h2>Hero Search</h2>
 
   <input #searchBox id="search-box" (input)="search(searchBox.value)" />
-
-  <ul class="search-result">
-    <li *ngFor="let hero of heroes$ | async">
+<div class="row">
+  <ul class="col"> </ul>
+  <ul class="list-group col-2">
+    <li class="list-group-item" *ngFor="let hero of heroes$ | async">
       <a routerLink="/detail/{{hero.id}}">
         {{hero.name}}
       </a>
     </li>
   </ul>
+  <ul class="col"> </ul>
+</div>
 </div>
