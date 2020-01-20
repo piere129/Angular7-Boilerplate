@@ -1,0 +1,8 @@
+<form (ngSubmit)="onSubmit(form1)" #form1="ngForm">
+  <input type="text" [(ngModel)]="user.name" name="username" #name="ngModel" required minlength="6">
+  <div *ngIf="name.invalid && (name.dirty || name.touched)">
+    <p *ngIf="name.hasError('required')"> this field is required! </p>
+    <p *ngIf="name.hasError('minlength')"> Min 6 chars are required </p>
+  </div>
+  <input type="submit" name="submit" value="Submit" [disabled]="form1.invalid">
+</form> 

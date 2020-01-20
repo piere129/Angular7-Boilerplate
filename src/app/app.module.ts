@@ -17,6 +17,7 @@ import { ErrorInterceptor } from './helpers/error.interceptor';
 import { fakeBackendProvider } from './helpers/fake-backend';
 import { InputOutputComponent } from './components/input-output/input-output.component';
 import { InputOutputChildComponent } from './components/input-output-child/input-output-child.component';
+import { FormsComponent } from './components/forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { InputOutputChildComponent } from './components/input-output-child/input
     LoginComponent,
     InputOutputComponent,
     InputOutputChildComponent,
+    FormsComponent,
   ],
   imports: [
     BrowserModule,
