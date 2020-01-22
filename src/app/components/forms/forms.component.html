@@ -1,20 +1,26 @@
 <!--# variable declares a local variable with a value, in this case the form-->
 <!--ngModel binds with the user variable in ts-file, #name local variable gets the value from user.name, and uses it for validation-->
 <!-- name="username" will be used as the name for the controls sent back in the ngForm-->
-
+<div class="container">
 <form (ngSubmit)="onSubmit(form1)" #form1="ngForm">
-  <input type="text" [(ngModel)]="user.name" name="username" #name="ngModel" required minlength="6">
-  <div *ngIf="name.invalid && (name.dirty || name.touched)">
+  <div class="form-group">
+    <label for="username">Name</label>
+  <input type="text" class="form-control" [(ngModel)]="user.name" name="username" #name="ngModel" required minlength="6">
+  <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
     <p *ngIf="name.hasError('required')"> Name is required! </p>
     <p *ngIf="name.hasError('minlength')"> Min 6 chars are required </p>
   </div>
-  <select id="power" required
+</div>
+<div class="form-group">
+    <label for="power">Power</label>
+  <select id="power" required class="form-control"
   [(ngModel)]="user.power" name="power" #power="ngModel">
 <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
 </select>
-<div *ngIf="power.invalid && (power.dirty || power.touched)">
+<div *ngIf="power.invalid && (power.dirty || power.touched)" class="alert alert-danger">
   <p *ngIf="power.hasError('required')"> power is required! </p>
 </div>
-
-  <input type="submit" name="submit" value="Submit" [disabled]="form1.invalid">
+</div>
+  <button type="submit" name="submit" class="btn btn-success" [disabled]="form1.invalid">Submit</button>
 </form> 
+</div>
