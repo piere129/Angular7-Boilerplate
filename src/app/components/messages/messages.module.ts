@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { MessagesComponent } from './messages.component';
-import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MessagesRouting } from './messages-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -11,7 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
     MessagesComponent
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
     FormsModule,
     ReactiveFormsModule,
     MessagesRouting,

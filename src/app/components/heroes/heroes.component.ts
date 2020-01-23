@@ -11,15 +11,12 @@ import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
 export class HeroesComponent implements OnInit {
 
   heroes: Hero[];
-  @ViewChild(HeroDetailComponent)
-  hdc: HeroDetailComponent;
  
   //automatically initialises the heroService variable
   constructor(private heroService: HeroService) { }
 
   ngOnInit() {
     this.getHeroes();
-    console.log(this.hdc.hero);
   }
 
   getHeroes(): void {
